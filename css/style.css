@@ -1,0 +1,26 @@
+div#control_panel{
+	margin: 0 auto;
+	width: 360px;
+	height: 100px;
+
+}
+div#screen{
+	margin: 0 auto;
+	width: 360px;
+	height: 640px;
+	border: 1px solid #000;
+	background-image: url("../img/screen_base.png");
+	background-size: contain;
+	position: relative;
+}
+
+.app_box{
+	width: 320px;
+	margin: 0 auto;
+}
+div#user_apps{
+	margin-top: 30px;
+}
+div#user_apps img{
+	margin: 11px;
+}

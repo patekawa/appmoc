@@ -14,13 +14,71 @@ div#screen{
 	position: relative;
 }
 
+div.border{
+	border: 1px solid #000;
+	height: 2px;
+	width: 350px;
+	margin: 5px auto;
+}
+
 .app_box{
 	width: 320px;
 	margin: 0 auto;
 }
+.app_box img{
+	width: 48px;
+	height: 48px;
+	margin: 14px;
+}
 div#user_apps{
 	margin-top: 30px;
+	height: 240px;
 }
 div#user_apps img{
-	margin: 11px;
+	/*margin: 11px;*/
+}
+
+#auto_apps{
+	height: 180px;
+}
+div.app_box_title{
+	text-align: center;
+	color: #DDD;
+	font-size: 24px;
+	text-shadow: -1px -1px #444, 1px -1px #444, -1px 1px #444, 1px 1px #444;
+}
+ul#auto_cat_list{
+	display: inline-block;
+	list-style: none;
+}
+ul#auto_cat_list li{
+	display: none;
+}
+ul#auto_cat_list li.active{
+	display: inline;
+}
+
+#ads_title.app_box_title{
+	font-size: 18px;
+}
+#ad_apps img{
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+}
+
+ul#pager_bar{
+	list-style: none;
+	margin: 0 auto;
+	width: 320px;
+}
+ul#pager_bar li{
+	border: 1px solid #666;
+	width: 100px;
+	height: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+ul#pager_bar li.active{
+	background-color: #888;
 }

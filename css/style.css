@@ -14,11 +14,20 @@ div#screen{
 	position: relative;
 }
 
+#screen .page{
+	display: none;
+	margin-top: 30px;
+	min-height: 530px;
+}
+#screen .page.active{
+	display: block;
+}
+
 div.border{
 	border: 1px solid #000;
-	height: 2px;
+	height: 1px;
 	width: 350px;
-	margin: 5px auto;
+	margin: 7px auto;
 }
 
 .app_box{
@@ -31,7 +40,6 @@ div.border{
 	margin: 14px;
 }
 div#user_apps{
-	margin-top: 30px;
 	height: 240px;
 }
 div#user_apps img{
@@ -57,6 +65,12 @@ ul#auto_cat_list li{
 ul#auto_cat_list li.active{
 	display: inline;
 }
+#auto_apps .auto_cat{
+	display: none;
+}
+#auto_apps .auto_cat.active{
+	display: block;
+}
 
 #ads_title.app_box_title{
 	font-size: 18px;
@@ -66,7 +80,29 @@ ul#auto_cat_list li.active{
 	height: 40px;
 	margin: 10px;
 }
+#ad_apps .ads_cat{
+	display: none;
+}
+#ad_apps .ads_cat.active{
+	display: block;
+}
 
+/* page3 */
+#app_search{
+	margin-top: 15px;
+	text-align: center;
+}
+#app_search input{
+	width: 250px;
+	height: 24px;
+}
+#app_search img{
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+/* pager bar */
 ul#pager_bar{
 	list-style: none;
 	margin: 0 auto;

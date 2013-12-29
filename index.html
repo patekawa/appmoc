@@ -7,6 +7,19 @@
 	<script src="./js/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script>
+$(function(){
+	$("#situations").change(function(){
+		$("#page2 .active").removeClass("active");
+		$("#page2 ." + $("#situations").val()).addClass("active");
+	});
+	$("#pager_bar li").click(function(){
+		$(".page.active, #pager_bar .active").removeClass("active");
+		$(this).addClass("active");
+		$("#screen .page").eq($("#pager_bar li").index(this)).addClass("active");
+	});
+});
+</script>
 </head>
 <body>
 
@@ -22,6 +35,14 @@
 	</div>
 	<div id="screen">
 		<div id="page1" class="page">
+			<div id="categorized_applist">
+				<div id="ads_title" class="app_box_title">
+					<span>カテゴリ別</span>
+				</div>
+				
+			</div>
+		</div>
+		<div id="page2" class="page active">
 			<div id="user_apps" class="app_box">
 				<img src="./img/icon/camera.png" alt="camera" />
 				<img src="./img/icon/clock.png" alt="clock" />
@@ -34,16 +55,24 @@
 				<div id="auto_cat_name" class="app_box_title">
 					<span>&lt;&lt;&nbsp;</span>
 					<ul id="auto_cat_list">
-						<li class="active">家</li>
-						<li>仕事</li>
-						<li>外出中</li>
-						<li>買い物</li>
+						<li class="home active">家</li>
+						<li class="working">仕事</li>
+						<li class="outside">外出中</li>
+						<li class="shopping">買い物</li>
 					</ul>
 					<span>&nbsp;&gt;&gt;</span>
 				</div>
-				<div id="home_apps" class="auto_cat home">
+				<div id="home_apps" class="auto_cat home active">
 					<img src="./img/icon2/Music.png" alt="music" />
 					<img src="./img/icon2/Pictures.png" alt="picture" />
+				</div>
+				<div id="working_apps" class="auto_cat working">
+					<img src="./img/icon2/Write.png" alt="write" />
+					<img src="./img/icon2/Portfolio.png" alt="portfolio" />
+				</div>
+				<div id="outside_apps" class="auto_cat outside">
+					<img src="./img/icon/map.png" alt="map" />
+					<img src="./img/icon/weather.png" alt="weather" />
 				</div>
 				
 			</div>
@@ -52,15 +81,32 @@
 				<div id="ads_title" class="app_box_title">
 					<span>こちらはいかが？</span>
 				</div>
-				<div id="home_ads" class="ads_cat home">
+				<div id="home_ads" class="ads_cat home active">
 					<img src="./img/icon_social/amazon_48.png" alt="amazon" />
+				</div>
+				<div id="working_ads" class="ads_cat working">
+					<img src="./img/icon_social/wikipedia_48.png" alt="wikipedia" />
+				</div>
+				<div id="outside_ads" class="ads_cat outside">
+					<img src="./img/icon/bag.png" alt="bag" />
+				</div>
+			</div>
+		</div>
+		<div id="page3" class="page">
+			<div id="all_applist">
+				<div id="all_applist_title" class="app_box_title">
+					<span>アプリ一覧</span>
+				</div>
+				<div id="app_search">
+					<input type="text" name="app_search_box" id="app_search_box" />
+					<img src="./img/icon2/Search.png" alt="search" />
 				</div>
 			</div>
 		</div>
 		<div id="pager">
 			<ul id="pager_bar">
-				<li class="active"></li>
 				<li></li>
+				<li class="active"></li>
 				<li></li>
 			</ul>
 		</div>
